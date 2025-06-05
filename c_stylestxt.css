@@ -50,3 +50,10 @@ footer p {
 img[usemap] {
     border-width: 0px;
 }
+
+
+.float-left {
+    float: left;
+    margin-right: 15px; /* Adjust as needed for spacing */
+    margin-bottom: 10px; /* Optional: adds space below the image */
+}
