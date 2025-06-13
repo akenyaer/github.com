@@ -12,57 +12,56 @@
 
 */
 
-/* 1. Display header, section, and nav as blocks */
+
 header, section, nav {
-  display: block;
+    display: block;
 }
 
-/* 2. Set default padding and margin to 0 */
 * {
   margin: 0;
   padding: 0;
 }
 
-/* 3. Style header */
 header {
   background-color: rgb(51, 51, 51);
   text-align: center;
   width: 55em;
 }
+
 header img {
   height: 4em;
 }
 
-/* 4. Float nav list left, set width and background */
-nav.vertical {
+
+nav {
   float: left;
   width: 15em;
   background-color: rgb(51, 51, 51);
 }
 
-/* 5. Style nav list items */
-nav.vertical ul {
-  list-style: none;
-}
-nav.vertical li {
+
+nav ul li {
   font-family: 'Century Gothic', sans-serif;
   font-size: 0.7em;
+  list-style-type: none;
   line-height: 1.4em;
   margin-left: 1em;
-  margin-bottom: 1em;
+  margin-bottom: 1.2em;
 }
 
-/* 6. Style links in nav list */
-nav.vertical a {
+
+nav ul li a {
   color: rgb(212, 212, 212);
   text-decoration: none;
 }
-nav.vertical a:hover {
+
+/* Step 8b: Hover effect for nav links */
+nav ul li a:hover {
   color: white;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
-/* 7. Style speech section */
+
 #speech {
   background-color: rgb(212, 212, 212);
   width: 40em;
@@ -70,7 +69,7 @@ nav.vertical a:hover {
   font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
 }
 
-/* 8. Style h1 in speech */
+
 #speech h1 {
   background-color: rgb(51, 51, 51);
   color: rgb(212, 212, 212);
@@ -78,33 +77,36 @@ nav.vertical a:hover {
   text-align: center;
 }
 
-/* 9. Style p in speech */
-#speech p {
+
+section.speech p, #speech p {
   font-size: 0.9em;
   margin: 1em;
 }
 
-/* 10. Drop-cap for first letter in first paragraph */
-#speech p:first-of-type::first-letter {
+
+#speech p:first-of-type::first-letter, section.speech p:first-of-type::first-letter {
   float: left;
   font-size: 4em;
-  line-height: 0.8em;
-  margin-right: 0.3em;
-  padding: 0 0.2em 0.2em 0;
-  border: 0.02em solid black;
+  line-height: 4em;
+  padding-bottom: 0.2em;
+  border-right: 0.02em solid black;
+  border-bottom: 0.02em solid black;
 }
 
-/* 11. Uppercase the first line of first paragraph */
-#speech p:first-of-type::first-line {
+
+#speech p:first-of-type::first-line, section.speech p:first-of-type::first-line {
   text-transform: uppercase;
 }
 
-/* 12. Stack image slices */
-#speech img {
+
+#speech img, section.speech img {
   float: right;
-  height: 4em;
   clear: right;
+  height: 4em;
 }
+
+
+
 
 
 
