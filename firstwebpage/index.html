@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-   <title>Akenyae Jones</title>
+    <title>Akenyae Jones</title>
 
-     <style>
-
+    <style>
         body {
             background-color: #f0f8ff;
             font-family: Arial, sans-serif;
@@ -21,59 +20,78 @@
             line-height: 1.6;
             margin: 20px;
         }
+
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+        }
+
+        th, td {
+            border: 2px solid #333;
+            padding: 12px 15px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
     </style>
 
-    <!-- External Style Sheet -->
     <link rel="stylesheet" href="styles.css">
+</head>
 
+<body>
 
-<h1>Welcome to my page!</h1>
-     <table border="2" cellpadding="10" cellspacing="5">
-    <tr>
-      <th colspan="5">Akenyae Jones</th>
-    </tr>
-    <tr>
-      <td>Kiwi</td>
-      <td>Apples</td>
-      <td>Bananas</td>
-      <td>Watermelon</td>
-      <td>Orange</td>
-    </tr>
-  </table>
-
-  <!-- Internal link to form -->
-  <p>Go to the <a href="#form-section">Favorite Fruits Form</a> below.</p>
-
-  <!-- External link -->
-  <p>Visit the 
-    <a href="https://www.medicalnewstoday.com/articles/324431 target="_blank" rel="noopener noreferrer">Fruits Info Website</a>
-    for more fruit information.
-  </p>
-
-  <!-- Form for submitting name and favorite fruit -->
-  <h2 id="form-section">Favorite Fruits Form</h2>
-  <form action="https://example.com/submit" method="GET">
-    <label for="name">Name:</label><br />
-    <input type="text" id="name" name="name" value="Akenyae Jones" required /><br /><br />
-
-    <label for="fruit">Favorite Fruit:</label><br />
-    <input type="text" id="fruit" name="fruit" placeholder="Enter your favorite fruit" required /><br /><br />
-
-    <input type="submit" value="Send" />
-  </form>
-    <p>Hi! My name is <strong><u>Akenyae Jones</strong></u> and I’m passionate about cybersecurity. My love for technology started at a young age—I was absolutely obsessed with customizing my <em>MySpace</em> page. That early curiosity sparked a lifelong interest in how technology works and how to protect digital information. Now, I'm pursuing a degree in cybersecurity and looking forward to building a future in the tech field.</p>
+    <h1>Welcome to my page!</h1>
+  
+    <p>Hi! My name is <strong><u>Akenyae Jones</u></strong> and I’m passionate about cybersecurity. My love for technology started at a young age—I was absolutely obsessed with customizing my <em>MySpace</em> page. That early curiosity sparked a lifelong interest in how technology works and how to protect digital information. Now, I'm pursuing a degree in cybersecurity and looking forward to building a future in the tech field.</p>
 
     <p>When I’m not studying or learning about new tech trends, I enjoy spending my spare time cooking new recipes and reading. Whether it's a mystery novel or an inspiring autobiography, reading helps me relax and stay curious. I also love trying new dishes and experimenting with flavors in the kitchen.</p>
 
     <hr>
 
-    <p>Here are a few things I enjoy:</p> <li> Learning about ethical hacking and vulnerabilities in cybersecurity</li> <li> Cooking homemade meals and learning new recipes </li> <li>Reading psychological thriller novels and exploring different places I've never been to before.</li>
+    <p>Here are a few things I enjoy:</p>
+    <ul>
+      <li>Learning about ethical hacking and vulnerabilities in cybersecurity</li>
+      <li>Cooking homemade meals and learning new recipes</li>
+      <li>Reading psychological thriller novels and exploring different places I've never been to before.</li>
+    </ul>
 
     <p>Visit my school’s website: 
         <a href="https://valenciacollege.edu" target="_blank">Valencia College</a>
     </p>
 
+    <!-- Your Table Starts Here -->
+    <table>
+      <thead>
+        <tr>
+          <th>Names of fruits</th>
+          <th>Fruit 1</th>
+          <th>Fruit 2</th>
+          <th>Fruit 3</th>
+          <th>Fruit 4</th>
+          <th>Fruit 5</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Akenyae Jones</td>
+          <td>Kiwi</td>
+          <td>Apples</td>
+          <td>Bananas</td>
+          <td>Watermelon</td>
+          <td>Orange</td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- Your Table Ends Here -->
+
 </body>
 </html>
-
-
