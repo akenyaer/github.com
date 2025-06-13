@@ -11,97 +11,113 @@
    Supporting Files: 
 
 */
-
-
-header, section, nav {
-    display: block;
-}
-
+/* Reset defaults */
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
+/* Body styling */
+body {
+  background-color: #fff;
+  font-size: 100%;
+  line-height: 1.5;
+}
+
+/* Ensure block layout for main elements */
+header, section, nav {
+  display: block;
+}
+
+/* Container for layout */
+.container {
+  width: 70em;
+  margin: 1em auto;
+}
+.container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Header styling */
 header {
   background-color: rgb(51, 51, 51);
   text-align: center;
-  width: 55em;
+  width: 100%;
+  margin-bottom: 1em;
 }
-
 header img {
   height: 4em;
 }
 
-
-nav {
+/* Navigation styling */
+nav.vertical {
   float: left;
   width: 15em;
   background-color: rgb(51, 51, 51);
+  padding: 1em 0;
 }
-
-
-nav ul li {
+nav.vertical ul {
+  list-style: none;
+}
+nav.vertical ul li {
   font-family: 'Century Gothic', sans-serif;
   font-size: 0.7em;
-  list-style-type: none;
   line-height: 1.4em;
-  margin-left: 1em;
-  margin-bottom: 1.2em;
+  margin: 0 0 1.2em 1em;
 }
-
-
-nav ul li a {
+nav.vertical ul li a {
   color: rgb(212, 212, 212);
   text-decoration: none;
 }
-
-/* Step 8b: Hover effect for nav links */
-nav ul li a:hover {
+nav.vertical ul li a:hover {
   color: white;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
-
-#speech {
-  background-color: rgb(212, 212, 212);
-  width: 40em;
+/* Speech section styling */
+section#speech {
   float: left;
+  width: 40em;
+  background-color: rgb(212, 212, 212);
   font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  padding: 1em;
 }
-
-
-#speech h1 {
+section#speech h1 {
   background-color: rgb(51, 51, 51);
   color: rgb(212, 212, 212);
   font-size: 2em;
   text-align: center;
+  padding: 0.5em 0;
+  margin: 0 0 1em 0;
 }
-
-
-section.speech p, #speech p {
+section#speech p {
   font-size: 0.9em;
-  margin: 1em;
+  margin: 1em 0;
 }
 
-
-#speech p:first-of-type::first-letter, section.speech p:first-of-type::first-letter {
+/* Drop-cap effect */
+section#speech p:first-of-type::first-letter {
   float: left;
   font-size: 4em;
   line-height: 4em;
+  margin-right: 0.3em;
   padding-bottom: 0.2em;
   border-right: 0.02em solid black;
   border-bottom: 0.02em solid black;
 }
-
-
-#speech p:first-of-type::first-line, section.speech p:first-of-type::first-line {
+section#speech p:first-of-type::first-line {
   text-transform: uppercase;
 }
 
-
-#speech img, section.speech img {
+/* Image slice stacking */
+section#speech img {
+  display: block;
   float: right;
   clear: right;
+  margin: 0 0 0.5em 1em;
   height: 4em;
 }
 
