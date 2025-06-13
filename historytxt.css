@@ -11,3 +11,101 @@
    Supporting Files: 
 
 */
+
+/* Step 3: Display header, section, and nav as block elements */
+header, section, nav {
+  display: block;
+}
+
+/* Step 4: Set all default padding and margin to 0 */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* Step 5: Style for the header */
+header {
+  background-color: rgb(51, 51, 51);
+  text-align: center;
+  width: 55em;
+  height: 4em;
+}
+
+/* Step 6: Float nav list on left with width and background color */
+nav {
+  float: left;
+  width: 15em;
+  background-color: rgb(51, 51, 51);
+}
+
+/* Step 7: Style nav list items */
+nav ul li {
+  font-family: 'Century Gothic', sans-serif;
+  font-size: 0.7em;
+  list-style-type: none;
+  line-height: 1.4em;
+  margin-left: 1em;
+  margin-bottom: 1em;
+}
+
+/* Step 8: Style nav links */
+nav ul li a {
+  color: rgb(212, 212, 212);
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: white;
+}
+
+/* Step 9: Style for speech section */
+section.speech {
+  background-color: rgb(212, 212, 212);
+  width: 40em;
+  float: left;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+/* Step 10: h1 in speech section */
+section.speech h1 {
+  background-color: rgb(51, 51, 51);
+  color: rgb(212, 212, 212);
+  font-size: 2em;
+  text-align: center;
+}
+
+/* Step 11: Paragraphs in speech section */
+section.speech p {
+  font-size: 0.9em;
+  margin: 1em;
+}
+
+/* Step 12: Drop-cap effect */
+section.speech p:first-of-type::first-letter {
+  float: left;
+  font-size: 4em;
+  line-height: 0.8em;
+  margin-right: 0.3em;
+  padding: 0 0.2em 0.2em 0;
+  border: solid black 0.02em;
+}
+
+/* Step 13: Uppercase first line of first paragraph */
+section.speech p:first-of-type::first-line {
+  text-transform: uppercase;
+}
+
+/* Step 14: Image stacking and height */
+section.speech img {
+  float: right;
+  height: 4em;
+}
+
+/* Step 15: Style comments */
+/* Header, nav, and section layout */
+/* Typography and spacing for nav and speech */
+/* Drop-cap and first-line styling for Lincoln's speech */
+/* Inline image alignment */
+
+
+
