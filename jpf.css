@@ -4,115 +4,109 @@
    Case Problem 1
 
    JPF Style Sheet
-   Author: Rebecca Peretz
-   Date:   3/1/2014
+   Author: Akenyae Jones
+   Date:   06/14/2025
 
    Filename:         jpf.css
    Supporting Files: 
 
 */
 
-
-/* Default styles */
-
+/* ===== Reset Default Styles ===== */
 * {
-   margin: 0px;
-   list-style: none;
-   padding: 0px;
-   text-decoration: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
 }
 
-
-/* Body styles */
+/* ===== Body Styles ===== */
 body {
-   font-family: Verdana, Geneva, sans-serif;
-   width: 900px;
-   margin: 0px auto;
+  font-family: Verdana, Geneva, sans-serif;
+  width: 900px;
+  margin: 0 auto;
+  background-color: #f8f8f8;
+  color: #333;
 }
 
-
-/* Horizontal Navigation List */
+/* ===== Horizontal Navigation ===== */
 nav.horizontal ul {
-   height: 24px;
-   margin-top: -30px;
-   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  height: 30px;
+  margin-top: 10px;
 }
 
 nav.horizontal ul li {
-   background-color: black;
-   display: inline;
-   font-size: 10px;
-   margin: 0px 15px 0px 10px;
+  margin: 0 15px;
+  font-size: 12px;
 }
 
 nav.horizontal ul li a {
-   color: rgb(254, 232, 130);
+  color: rgb(254, 232, 130);
+  padding: 5px;
+  display: inline-block;
 }
 
 nav.horizontal ul li a:hover {
-   color: rgb(211, 254, 106);
+  color: rgb(211, 254, 106);
 }
 
-
-
-/* Vertical Navigation List */
+/* ===== Vertical Navigation ===== */
 nav.vertical ul {
-   background-color: black;
-   clear: left;
-   float: left;
-   width: 150px;
-
-   -moz-border-radius-bottomright: 100% 250px;
-   -webkit-border-bottom-right-radius: 100% 250px;
-   border-bottom-right-radius: 100% 250px;
+  background-color: black;
+  float: left;
+  width: 150px;
+  border-bottom-right-radius: 100% 250px;
+  padding: 10px 0;
 }
 
 nav.vertical ul li {
-   font-size: 12px;
-   line-height: 1.6em;
-   margin: 5px 0px 7px 10px;
+  font-size: 12px;
+  line-height: 1.6em;
+  margin: 5px 0 7px 10px;
 }
 
 nav.vertical ul li:first-of-type {
-   margin-top: 20px;
+  margin-top: 20px;
 }
 
 nav.vertical ul li:last-of-type {
-   padding-bottom: 30px;
+  padding-bottom: 30px;
 }
 
 nav.vertical ul li a {
-   color: rgb(254, 232, 130);
+  color: rgb(254, 232, 130);
+  display: block;
+  padding: 4px 10px;
 }
 
 nav.vertical ul li a:hover {
-   color: rgb(211, 254, 106);
-   text-decoration: overline underline;
+  color: rgb(211, 254, 106);
+  text-decoration: underline overline;
 }
 
-
-
-/* Main Page Section */
+/* ===== Main Content Section ===== */
 section {
-   float: left;
-   margin: 10px 0px 0px 20px;
-   width: 500px;
+  float: left;
+  margin: 10px 0 0 20px;
+  width: 500px;
 }
 
 section article h1 {
-   font-size: 14px;
-   margin-top: 10px;
+  font-size: 16px;
+  margin-top: 10px;
 }
 
 section article p {
-   font-size: 10px;
-   margin: 10px 0px;
-   width: 420px;
+  font-size: 12px;
+  margin: 10px 0;
+  width: 420px;
+  line-height: 1.4;
 }
-
-
-
-
 
 
 
