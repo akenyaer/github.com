@@ -12,6 +12,7 @@
 
 */
 /* Reset defaults */
+/* Reset and box-sizing */
 * {
   margin: 0;
   padding: 0;
@@ -23,6 +24,7 @@ body {
   background-color: #fff;
   font-size: 100%;
   line-height: 1.5;
+  font-family: Arial, sans-serif; /* Added a fallback font */
 }
 
 /* Ensure block layout for main elements */
@@ -34,6 +36,7 @@ header, section, nav {
 .container {
   width: 70em;
   margin: 1em auto;
+  /* clearfix for floated children */
 }
 .container::after {
   content: "";
@@ -50,11 +53,8 @@ header {
 }
 header img {
   height: 4em;
-}
-
-img {
-  vertical-align: middle; 
-  display: inline; 
+  vertical-align: middle; /* moved here for clarity */
+  display: inline-block;  /* changed inline to inline-block for better layout control */
 }
 
 /* Navigation styling */
@@ -76,6 +76,7 @@ nav.vertical ul li {
 nav.vertical ul li a {
   color: rgb(212, 212, 212);
   text-decoration: none;
+  transition: color 0.3s ease; /* smooth hover effect */
 }
 nav.vertical ul li a:hover {
   color: white;
@@ -89,6 +90,7 @@ section#speech {
   background-color: rgb(212, 212, 212);
   font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
   padding: 1em;
+  box-sizing: border-box; /* just to be safe */
 }
 section#speech h1 {
   background-color: rgb(51, 51, 51);
@@ -125,10 +127,3 @@ section#speech img {
   margin: 0 0 0.5em 1em;
   height: 4em;
 }
-
-
-
-
-
-
-
