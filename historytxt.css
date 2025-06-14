@@ -10,9 +10,6 @@
    Filename:         history.css
    Supporting Files: 
 
-*/
-/* Reset defaults */
-/* Reset and box-sizing */
 * {
   margin: 0;
   padding: 0;
@@ -24,7 +21,7 @@ body {
   background-color: #fff;
   font-size: 100%;
   line-height: 1.5;
-  font-family: sans-serif; /* Added a fallback font */
+  font-family: sans-serif;
 }
 
 /* Ensure block layout for main elements */
@@ -36,7 +33,6 @@ header, section, nav {
 .container {
   width: 70em;
   margin: 1em auto;
-  /* clearfix for floated children */
 }
 .container::after {
   content: "";
@@ -53,8 +49,8 @@ header {
 }
 header img {
   height: 4em;
-  vertical-align: middle; /* moved here for clarity */
-  display: inline-block;  /* changed inline to inline-block for better layout control */
+  vertical-align: middle;
+  display: inline-block;
 }
 
 /* Navigation styling */
@@ -76,7 +72,7 @@ nav.vertical ul li {
 nav.vertical ul li a {
   color: rgb(212, 212, 212);
   text-decoration: none;
-  transition: color 0.3s ease; /* smooth hover effect */
+  transition: color 0.3s ease;
 }
 nav.vertical ul li a:hover {
   color: white;
@@ -90,8 +86,18 @@ section#speech {
   background-color: rgb(212, 212, 212);
   font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
   padding: 1em;
-  box-sizing: border-box; /* just to be safe */
+  box-sizing: border-box;
+  overflow: hidden; /* Clears the floats inside */
 }
+
+section#speech img {
+  float: right;
+  margin: 0 0 1em 1em;
+  max-width: 40%;
+  height: auto;
+  display: block;
+}
+
 section#speech h1 {
   background-color: rgb(51, 51, 51);
   color: rgb(212, 212, 212);
@@ -100,6 +106,7 @@ section#speech h1 {
   padding: 0.5em 0;
   margin: 0 0 1em 0;
 }
+
 section#speech p {
   font-size: 0.9em;
   margin: 1em 0;
@@ -117,13 +124,4 @@ section#speech p:first-of-type::first-letter {
 }
 section#speech p:first-of-type::first-line {
   text-transform: uppercase;
-}
-
-/* Image slice stacking */
-section#speech img {
-  display: block;
-  float: right;
-  clear: right;
-  margin: 0 0 0.5em 1em;
-  height: 4em;
 }
