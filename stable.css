@@ -10,20 +10,23 @@
    Filename:         stable.css
    Supporting Files: green.jpg, gold.jpg
 
-*/
-
 .spuzzle, .subtable {
     border-collapse: collapse;
 }
 
-.spuzzle td {
-    border: 5px outset gray;
+/* Border for all spuzzle cells including headers */
+.spuzzle td, .spuzzle th {
+    border: 3px solid gray; /* thinner than 5px for better look */
 }
 
+/* Larger font and padding for row/column headers */
 .spuzzle tbody th {
     font-size: 40px;
+    padding: 5px;
+    text-align: center;
 }
 
+/* Sudoku number cells styling */
 .subtable td {
     font-size: 20px;
     color: blue;
@@ -32,24 +35,20 @@
     text-align: center;
     vertical-align: middle;
     border: 1px solid black;
+    padding: 0; /* no extra padding to keep consistent cell size */
 }
 
-
+/* Background images with proper sizing */
 .goldbox td {
     background-image: url('gold.jpg');
     background-repeat: no-repeat;
     background-position: 50% 50%;
+    background-size: cover; /* ensures background covers cell */
 }
-
 
 .greenbox td {
     background-image: url('green.jpg');
     background-repeat: no-repeat;
     background-position: 50% 50%;
+    background-size: cover; /* ensures background covers cell */
 }
-
-
-
-
-
-
