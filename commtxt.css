@@ -4,11 +4,71 @@
    Case Problem 1
 
    Comment Form Style Sheet
-   Author: 
-   Date:   
+   Author: Akenyae Jones
+   Date:   06/21/2025
 
    Filename:         comments.css
    Supporting Files: go.png, stop.png
 
 */
 
+/* 1. Style the fieldset */
+fieldset {
+  background-color: rgb(245, 245, 255);
+  margin: 15px auto;
+  padding: 5px;
+  width: 90%;
+}
+
+/* 2. Style the labels */
+label {
+  display: block;
+  float: left;
+  clear: left;
+  font-size: 0.9em;
+  width: 100%;
+  margin: 5px 0;
+}
+
+/* 3. Style input and textarea fields */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  display: block;
+  float: right;
+  font-size: 0.9em;
+  width: 55%;
+  margin: 0 10px;
+}
+
+textarea {
+  height: 150px;
+}
+
+/* 4. Style the submit button */
+input[type="submit"] {
+  display: block;
+  clear: both;
+  width: 200px;
+  height: 30px;
+  margin: 5px auto;
+}
+
+/* 5. Valid input focus with background image */
+input:focus:valid {
+  background-color: rgb(225, 240, 225);
+  background-image: url("go.png");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* 6. Invalid input focus with background image */
+input:focus:invalid {
+  background-color: rgb(240, 225, 225);
+  background-image: url("stop.png");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
