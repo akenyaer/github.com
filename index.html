@@ -513,155 +513,93 @@
 </html>
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 
-   <head>
-   <!--
-      New Perspectives on HTML and CSS
-      Tutorial 6
-      Case Problem 1
+<head>
+  <meta charset="UTF-8" />
+  <title>My Multi-section Page</title>
+  <style>
+    /* Basic reset and font */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f0f0f0;
+    }
 
-      SBlogger News page
-      Author: Akenyae Jones
-      Date: 06/21/2025  
+    /* Container style for each major content area */
+    .content-block {
+      background: #fff;
+      border: 1px solid #ccc;
+      margin: 30px auto;
+      padding: 20px;
+      max-width: 960px;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+    }
 
-      Filename:         sblogger.htm
-      Supporting files: blog.css, comments.css, go.png, 
-                        modernizr-1.5.js, sblogo.jpg, stop.png
-   -->
+    /* Optional: different background colors or border colors for clarity */
+    .content-block:nth-child(odd) {
+      background: #fafafa;
+    }
 
-      <meta charset="UTF-8" />
-      <title>Sblogger News</title>
-      <script src="modernizr-1.5.js"></script>
-      <script src="formsubmit.js"></script>
-      <link href="blog.css" rel="stylesheet" type="text/css" />
-      <link rel="stylesheet" type="text/css" href="commtxt.css">
+    .content-block h1 {
+      margin-top: 0;
+    }
+  </style>
+</head>
 
-   </head>
+<body>
 
+  <!-- First content block -->
+  <section class="content-block" id="news-article">
+    <h1>Jenkins on Ice</h1>
+    <h2>Keywords: Basketball Jenkins NBA</h2>
+    <p>Retired NBA star Dennis Jenkins announced today ...</p>
+    <!-- your full article content here -->
+  </section>
 
-   <body>
-      <header>
-         <img src="sblogo.jpg" alt="SBLOGGER" />
-      </header>
+  <!-- Second content block -->
+  <section class="content-block" id="comment-form">
+    <h2>Post Your Comments</h2>
+    <form action="https://www.sblogger/cgi-bin/subcomments" method="post">
+      <fieldset id="comments">
+        <legend>Leave a Comment</legend>
+        <!-- form inputs -->
+        <label for="username">Username:
+          <input type="text" id="username" name="username" required>
+        </label><br><br>
+        <label for="email">E-mail:
+          <input type="email" id="email" name="email" required>
+        </label><br><br>
+        <label for="password">Password:
+          <input type="password" id="password" name="password" required>
+        </label><br><br>
+        <label for="commentbox">Comment:
+          <textarea id="commentbox" name="commentbox" maxlength="500" required></textarea>
+        </label><br><br>
+        <input type="submit" value="Submit Comment">
+      </fieldset>
+    </form>
+  </section>
 
-      <nav>
-         <ul>
-            <li><a href="sblogger.htm">HOME PAGE</a></li>
-            <li class="linktitle">News Sites</li>
-            <li><a href="#">ESPN</a></li>
-            <li><a href="#">SportsLine</a></li>
-            <li><a href="#">Sports Illustrated</a></li>
-            <li><a href="#">CNN</a></li>
-            <li><a href="#">MSNBC</a></li>
-            <li><a href="#">FOX Sports</a></li>
-            <li class="linktitle">Columnists</li>
-            <li><a href="#">Thomas Bacon</a></li>
-            <li><a href="#">Steve Carls</a></li>
-            <li><a href="#">Debbie Eggert</a></li>
-            <li><a href="#">Frank Franks</a></li>
-            <li><a href="#">Bob Mitchell</a></li>
-            <li><a href="#">Sean Smith</a></li>
-            <li><a href="#">Tom Upham</a></li>
-            <li><a href="#">Mary Yancy</a></li>
-            <li class="linktitle">Blogs</li>
-            <li><a href="#">Captain X</a></li>
-            <li><a href="#">Yankee Clipper</a></li>
-            <li><a href="#">The Red Sock</a></li>
-            <li><a href="#">Packer Heaven</a></li>
-            <li><a href="#">FBall Blog</a></li>
-            <li><a href="#">Couch Potato</a></li>
-            <li><a href="#">Sports Rounder</a></li>
-            <li><a href="#">Old Feller</a></li>
-         </ul>
-      </nav>
+  <!-- Third content block -->
+  <aside class="content-block" id="recent-articles">
+    <h1>Recent Articles</h1>
+    <ul>
+      <li>Basebrawl - Comments: 10</li>
+      <li>Save that Pen! - Comments: 7</li>
+      <li>The Wages of Dim - Comments: 15</li>
+      <!-- more articles -->
+    </ul>
+  </aside>
 
-      <section>
-         <article>
-        
-               <h1>Jenkins on Ice</h1>
-               <h2>Keywords: Basketball Jenkins NBA</h2>
-            
-            <p>Retired NBA star Dennis Jenkins announced today that 
-               he has signed a contract with <em>Long Sleep</em> to
-               have his body frozen before death, to be revived only 
-               when medical science has discovered a cure to the aging
-               process.
-            </p>
-            <p>"Lots of guys get frozen for cancer and stuff,"
-               explains the always-entertaining Jenkins, "I just want
-               to return once they can give me back my eternal youth."
-               [sic] Perhaps Jenkins is also hoping medical science can 
-               cure his free-throw shooting  - 47% and falling during 
-               his last year in the league.
-            </p>
-            <p>A reader tells us that Jenkins may not be aware that
-               part of the <em>Long Sleep</em> process is to remove the             
-               head, keeping only the brain to be revived. This would 
-               be a problem for Jenkins since he would be left with his 
-               least-valuable asset.
-            </p>
-            <p>Comments: <a href="#">14</a></p>
-            <cite>Posted: 9/18/2014 @2:41 pm</cite>
+  <!-- Fourth content block example -->
+  <section class="content-block" id="other-content">
+    <h1>Other Page Content</h1>
+    <p>This is another distinct section of your page that will not "mush" with the others.</p>
+  </section>
 
-         </article>
-
-         <h2>Post Your Comments</h2>
-         <form action="https://www.sblogger/cgi-bin/subcomments" method="post">
-  <fieldset id="comments">
-    <legend>Leave a Comment</legend>
-
-    <!-- Username input -->
-    <label for="username">Username:
-      <input type="text" id="username" name="username" required title="Supply your username">
-    </label><br><br>
-
-    <!-- Email input -->
-    <label for="email">E-mail:
-      <input type="email" id="email" name="email" required title="Supply a valid email address">
-    </label><br><br>
-
-    <!-- Password input -->
-    <label for="password">Password:
-      <input type="password" id="password" name="password" required title="You must provide your password">
-    </label><br><br>
-
-    <!-- Comment label and textarea -->
-    <label for="commentbox">
-      Comment<br>
-      (500 character limit)
-      <textarea id="commentbox" name="commentbox" rows="5" cols="40" maxlength="500" required></textarea>
-    </label><br><br>
-
-    <!-- Submit button -->
-    <input type="submit" value="Submit Comment">
-  </fieldset>
-</form>
-
-
-
-
-      </section>
-
-      <aside>
-         <h1>Recent Articles</h1>
-         <ul>
-            <li>Basebrawl<br /><a href="#"><span>Comments: 10</span></a></li>
-            <li>Save that Pen!<br /><a href="#"><span>Comments: 7</span></a></li>
-            <li>The Wages of Dim<br /><a href="#"><span>Comments: 15</span></a></li>
-            <li>Worst Play Evah!<br /><a href="#"><span>Comments: 12</span></a></li>
-            <li>Give me my Hall Pass<br /><a href="#"><span>Comments: 23</span></a></li>
-            <li>Go to the Back of the Bloodline<br /><a href="#"><span>Comments: 19</span></a></li>
-            <li>You ain't da Man<br /><a href="#"><span>Comments: 24</span></a></li>
-            <li>Yips and Yaps<br /><a href="#"><span>Comments: 21</span></a></li>
-            <li>Monument in Gouda<br /><a href="#"><span>Comments: 18</span></a></li>
-            <li>Next Time Rent It!<br /><a href="#"><span>Comments: 33</span></a></li>
-            <li>That's not a Sport<br /><a href="#"><span>Comments: 25</span></a></li>
-         </ul>
-      </aside>
-
-   </body>
+</body>
 
 </html>
+
