@@ -95,3 +95,104 @@
 
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Valencia Student Form</title>
+</head>
+<body>
+  <!-- Valencia Logo -->
+  <img src="https://valenciacollege.edu/_resources/img/logo.png" alt="Valencia Logo" width="200">
+
+  <h2>Student Input Form</h2>
+
+  <form action="#" method="post" enctype="multipart/form-data">
+    <table border="1" cellpadding="10">
+      <!-- First Name -->
+      <tr>
+        <td><label for="firstName">First Name:</label></td>
+        <td><input type="text" id="firstName" name="firstName" required></td>
+      </tr>
+
+      <!-- Last Name -->
+      <tr>
+        <td><label for="lastName">Last Name:</label></td>
+        <td><input type="text" id="lastName" name="lastName" required></td>
+      </tr>
+
+      <!-- Gender (Radio Buttons) -->
+      <tr>
+        <td>Gender:</td>
+        <td>
+          <input type="radio" id="male" name="gender" value="Male">
+          <label for="male">Male</label><br>
+          <input type="radio" id="female" name="gender" value="Female">
+          <label for="female">Female</label>
+        </td>
+      </tr>
+
+      <!-- Favorite Colors (Checkboxes) -->
+      <tr>
+        <td>Select Your Favorite Colors:</td>
+        <td>
+          <input type="checkbox" id="red" name="color" value="Red">
+          <label for="red">Red</label><br>
+          <input type="checkbox" id="white" name="color" value="White">
+          <label for="white">White</label><br>
+          <input type="checkbox" id="blue" name="color" value="Blue">
+          <label for="blue">Blue</label>
+        </td>
+      </tr>
+
+      <!-- Sports Dropdown -->
+      <tr>
+        <td>Choose a Sport:</td>
+        <td>
+          <select name="sport" id="sport">
+            <option value="soccer">Soccer</option>
+            <option value="basketball">Basketball</option>
+            <option value="tennis">Tennis</option>
+            <option value="baseball">Baseball</option>
+            <option value="volleyball">Volleyball</option>
+            <option value="golf">Golf</option>
+            <option value="swimming">Swimming</option>
+            <option value="wrestling">Wrestling</option>
+            <option value="track">Track & Field</option>
+            <option value="rugby">Rugby</option>
+          </select>
+        </td>
+      </tr>
+
+      <!-- Global Warming Textarea -->
+      <tr>
+        <td>Write about Global Warming:</td>
+        <td>
+          <textarea name="globalWarming" rows="20" cols="50" placeholder="Write your thoughts here..."></textarea>
+        </td>
+      </tr>
+
+      <!-- Password -->
+      <tr>
+        <td><label for="password">Password:</label></td>
+        <td><input type="password" id="password" name="password" maxlength="10" required></td>
+      </tr>
+
+      <!-- File Upload -->
+      <tr>
+        <td><label for="fileUpload">Upload a File:</label></td>
+        <td><input type="file" id="fileUpload" name="fileUpload"></td>
+      </tr>
+
+      <!-- Submit Button -->
+      <tr>
+        <td colspan="2" style="text-align:center;">
+          <input type="submit" value="Submit Form">
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>
+
