@@ -46,3 +46,21 @@ tbody tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
+
+.flex-container {
+  display: flex;
+  align-items: flex-start; /* aligns text and video at the top */
+  gap: 20px; /* space between text and video */
+  max-width: 900px;
+  margin: 0 auto 40px; /* center horizontally, add bottom margin */
+}
+
+.text-content {
+  flex: 1; /* text takes remaining space */
+}
+
+.video-content {
+  flex-shrink: 0; /* prevents video from shrinking */
+  width: 480px; /* fixed width for video */
+}
+
