@@ -1,110 +1,260 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-   <head>
-   <!--
-      New Perspectives on HTML and CSS
-      Tutorial 7
-      Case Problem 1
+<head>
+  <!--
+    New Perspectives on HTML and CSS
+    Tutorial 7
+    Case Problem 1
 
-      The Robert Frost Web Page
-      Author: 
-      Date:   
+    The Robert Frost Web Page
+    Author: Akenyae Jones
+    Date:   06/27/2025
 
-      Filename:         rf.htm
-      Supporting files: devotion.mp3, devotion.ogg, devotion.swf,
-                        fireice.mp3, fireice.ogg, fireice.swf,
-                        modernizr-1.5.js, poetry.css, rfback.png, rflogo.gif
+    Filename:         rf.htm
+    Supporting files: frost-road-not-taken.mp3, frost-road-not-taken.ogg,
+                      flash-audio-player.swf, modernizr-1.5.js, poetry.css, rfback.png, rflogo.gif
+  -->
 
-   -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Robert Frost Web Page</title>
+  <script src="modernizr-1.5.js"></script>
+  <link href="poetry.css" rel="stylesheet" />
 
-      <meta charset="UTF-8" />
-      <title>The Robert Frost Web Page</title>
-      <script src="modernizr-1.5.js"></script>
+  <style>
+    audio {
+      background-color: rgba(0, 0, 0, 0.5); /* Black with 50% transparency */
+      width: 100%;
+      display: block;
+    }
+  </style>
+</head>
 
-      <link href="poetry.css" rel="stylesheet" />
+<body>
+  <nav>
+    <ul>
+      <li><a href="http://en.wikipedia.org/wiki/Robert_Frost">Robert Frost on Wikipedia</a></li>
+      <li><a href="http://www.poets.org/poet.php/prmPID/192">Robert Frost at Poets.org</a></li>
+      <li><a href="http://robertfrostoutloud.com">Robert Frost Out Loud</a></li>
+      <li><a href="http://www.ketzle.com/frost">Robert Frost: America's Poet</a></li>
+    </ul>
+  </nav>
 
-   </head>
+  <header>
+    <img src="rflogo.gif" alt="Robert Frost Website Logo" />
+  </header>
 
-   <body>
-      <nav>
-         <ul>
-            <li><a href="http://en.wikipedia.org/wiki/Robert_Frost">Robert Frost on Wikipedia</a></li>
-            <li><a href="http://www.poets.org/poet.php/prmPID/192">Robert Frost at Poets.org</a></li>
-            <li><a href="http://robertfrostoutloud.com">Robert Frost Out Loud</a></li>
-            <li><a href="http://www.ketzle.com/frost">Robert Frost: America's Poet</a></li>
-         </ul>
-      </nav>
+  <!-- Multimedia Section -->
+  <figure>
+    <iframe 
+      width="320" 
+      height="200" 
+      src="https://www.youtube.com/embed/05f3agJ--IY?fs=0" 
+      title="Robert Frost reads The Road Not Taken"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      sandbox="allow-scripts allow-same-origin"
+      style="border: none;">
+    </iframe>
+    <figcaption>Robert Frost reads <cite>The Road Not Taken</cite></figcaption>
+  </figure>
 
-      <header>
-         <img src="rflogo.gif" alt="The Robert Frost Web Page" />
-      </header>
+  <figure>
+    <figcaption>Listen to the poem:</figcaption>
+    <audio controls>
+      <source src="frost-road-not-taken.mp3" type="audio/mpeg">
+      <source src="frost-road-not-taken.ogg" type="audio/ogg">
+      <object type="application/x-shockwave-flash" data="flash-audio-player.swf" width="200" height="20">
+        <param name="movie" value="flash-audio-player.swf" />
+        <param name="FlashVars" value="mp3=frost-road-not-taken.mp3" />
+        <p>Your browser does not support audio playback.</p>
+      </object>
+    </audio>
+  </figure>
 
-      <figure>
+  <!-- Frost Bio -->
+  <section id="main">
+    <p>Robert Frost was born in San Francisco on March 26, 1874.
+      While still a young boy, Frost's father died and the family moved to
+      Massachusetts. Frost attended Dartmouth College for less than a semester,
+      after which he moved back to Massachusetts to teach and work as a reporter
+      for a local newspaper. Frost returned to college in 1897 to attend Harvard,
+      but he did not graduate. Frost was essentially a self-educated man.
+    </p>
 
-         <figcaption>Robert Frost reads <cite>The Road Not Taken</cite></figcaption>
-      </figure>
+    <p>After Harvard, Frost married and sold the farm he had inherited. With
+      the proceeds of the sale, he moved his family to England, where he wrote for
+      ten years without success. His first works were published by a
+      London publisher in 1913.
+    </p>
 
-      <section id="main">
+    <p>Frost's works, once printed, met immediate acclaim. His collection of
+      poems <i>A Further Range</i> won the Pulitzer Prize in 1937. Though he is
+      sometimes cast as a pastoral poet, Frost was also a fierce intellectual with
+      a decidedly dark view of himself and the world. Frost would use rural
+      settings as a metaphor for his philosophical views. Robert Frost is one of
+      the best-known and most beloved of American poets. He died in Boston on
+      January 29, 1963.
+    </p>
+  </section>
 
-         <p>Robert Frost was born in San Francisco on March 26, 1874. 
-            While still a young boy, Frost's father died and the family moved to 
-            Massachusetts. Frost attended Dartmouth College for less than a semester, 
-            after which he moved back to Massachusetts to teach and work as a reporter 
-            for a local newspaper. Frost returned to college in 1897 to attend Harvard, 
-            but he did not graduate. Frost was essentially a self-educated man.
-         </p>
-             
-         <p>After Harvard, Frost married and sold the farm he had inherited. With
-            the proceeds of the sale, he moved his family to England, where he wrote for
-            ten years without success. His first works were published by a
-            London publisher in 1913.
-         </p>
+  <!-- Poems Section -->
+  <section id="secondary">
+    <section class="poem">
+      <h2>Fire and Ice</h2>
+      <p>
+        Some say the world will end in fire,<br />
+        Some say in ice.<br />
+        From what I've tasted of desire<br />
+        I hold with those who favor fire.<br />
+        But if it had to perish twice,<br />
+        I think I know enough of hate<br />
+        To say that for destruction ice<br />
+        Is also great<br />
+        And would suffice.
+      </p>
+    </section>
 
-         <p>Frost's works, once printed, met immediate acclaim. His collection of
-            poems <i>A Further Range</i> won the Pulitzer Prize in 1937. Though he is
-            sometimes cast as a pastoral poet, Frost was also a fierce intellectual with 
-            a decidedly dark view of himself and the world. Frost would use rural 
-            settings as a metaphor for his philosophical views. Robert Frost is one of 
-            the best-known and most beloved of American poets. He died in Boston on 
-            January 29, 1963.
-         </p>
-      </section>
+    <section class="poem">
+      <h2>Devotion</h2>
+      <p>
+        The heart can think of no devotion<br />
+        Greater than being shore to the ocean&#151;<br />
+        Holding the curve of one position,<br />
+        Counting an endless repetition.
+      </p>
+    </section>
+  </section>
+</body>
 
-      <section id="secondary">
+</html>
+<!DOCTYPE html>
+<html lang="en">
 
-         <section class="poem">
-            <h2>Fire and Ice</h2>
+<head>
+  <!--
+    New Perspectives on HTML and CSS
+    Tutorial 7
+    Case Problem 1
 
+    The Robert Frost Web Page
+    Author: Akenyae Jones
+    Date:   06/27/2025
 
+    Filename:         rf.htm
+    Supporting files: frost-road-not-taken.mp3, frost-road-not-taken.ogg,
+                      flash-audio-player.swf, modernizr-1.5.js, poetry.css, rfback.png, rflogo.gif
+  -->
 
-            <p>
-               Some say the world will end in fire,<br />
-               Some say in ice.<br />
-               From what I've tasted of desire<br />
-               I hold with those who favor fire.<br />
-               But if it had to perish twice,<br />
-               I think I know enough of hate<br />
-               To say that for destruction ice<br />
-               Is also great<br />
-               And would suffice.
-            </p>
-         </section>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Robert Frost Web Page</title>
+  <script src="modernizr-1.5.js"></script>
+  <link href="poetry.css" rel="stylesheet" />
 
-         <section class="poem">
-            <h2>Devotion</h2>
+  <style>
+    audio {
+      background-color: rgba(0, 0, 0, 0.5); /* Black with 50% transparency */
+      width: 100%;
+      display: block;
+    }
+  </style>
+</head>
 
+<body>
+  <nav>
+    <ul>
+      <li><a href="http://en.wikipedia.org/wiki/Robert_Frost">Robert Frost on Wikipedia</a></li>
+      <li><a href="http://www.poets.org/poet.php/prmPID/192">Robert Frost at Poets.org</a></li>
+      <li><a href="http://robertfrostoutloud.com">Robert Frost Out Loud</a></li>
+      <li><a href="http://www.ketzle.com/frost">Robert Frost: America's Poet</a></li>
+    </ul>
+  </nav>
 
-            <p>
-               The heart can think of no devotion<br />
-               Greater than being shore to the ocean&#151;<br />
-               Holding the curve of one position,<br />
-               Counting an endless repetition.
-            </p>
-         </section>
+  <header>
+    <img src="rflogo.gif" alt="Robert Frost Website Logo" />
+  </header>
 
-      </section>
+  <!-- Multimedia Section -->
+  <figure>
+    <iframe 
+      width="320" 
+      height="200" 
+      src="https://www.youtube.com/embed/05f3agJ--IY?fs=0" 
+      title="Robert Frost reads The Road Not Taken"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      sandbox="allow-scripts allow-same-origin"
+      style="border: none;">
+    </iframe>
+    <figcaption>Robert Frost reads <cite>The Road Not Taken</cite></figcaption>
+  </figure>
 
-   </body>
+  <figure>
+    <figcaption>Listen to the poem:</figcaption>
+    <audio controls>
+      <source src="frost-road-not-taken.mp3" type="audio/mpeg">
+      <source src="frost-road-not-taken.ogg" type="audio/ogg">
+      <object type="application/x-shockwave-flash" data="flash-audio-player.swf" width="200" height="20">
+        <param name="movie" value="flash-audio-player.swf" />
+        <param name="FlashVars" value="mp3=frost-road-not-taken.mp3" />
+        <p>Your browser does not support audio playback.</p>
+      </object>
+    </audio>
+  </figure>
+
+  <!-- Frost Bio -->
+  <section id="main">
+    <p>Robert Frost was born in San Francisco on March 26, 1874.
+      While still a young boy, Frost's father died and the family moved to
+      Massachusetts. Frost attended Dartmouth College for less than a semester,
+      after which he moved back to Massachusetts to teach and work as a reporter
+      for a local newspaper. Frost returned to college in 1897 to attend Harvard,
+      but he did not graduate. Frost was essentially a self-educated man.
+    </p>
+
+    <p>After Harvard, Frost married and sold the farm he had inherited. With
+      the proceeds of the sale, he moved his family to England, where he wrote for
+      ten years without success. His first works were published by a
+      London publisher in 1913.
+    </p>
+
+    <p>Frost's works, once printed, met immediate acclaim. His collection of
+      poems <i>A Further Range</i> won the Pulitzer Prize in 1937. Though he is
+      sometimes cast as a pastoral poet, Frost was also a fierce intellectual with
+      a decidedly dark view of himself and the world. Frost would use rural
+      settings as a metaphor for his philosophical views. Robert Frost is one of
+      the best-known and most beloved of American poets. He died in Boston on
+      January 29, 1963.
+    </p>
+  </section>
+
+  <!-- Poems Section -->
+  <section id="secondary">
+    <section class="poem">
+      <h2>Fire and Ice</h2>
+      <p>
+        Some say the world will end in fire,<br />
+        Some say in ice.<br />
+        From what I've tasted of desire<br />
+        I hold with those who favor fire.<br />
+        But if it had to perish twice,<br />
+        I think I know enough of hate<br />
+        To say that for destruction ice<br />
+        Is also great<br />
+        And would suffice.
+      </p>
+    </section>
+
+    <section class="poem">
+      <h2>Devotion</h2>
+      <p>
+        The heart can think of no devotion<br />
+        Greater than being shore to the ocean&#151;<br />
+        Holding the curve of one position,<br />
+        Counting an endless repetition.
+      </p>
+    </section>
+  </section>
+</body>
 
 </html>
