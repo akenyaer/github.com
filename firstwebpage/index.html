@@ -55,6 +55,20 @@
 
     <p>When I’m not studying or learning about new tech trends, I enjoy spending my spare time cooking new recipes and reading. Whether it's a mystery novel or an inspiring autobiography, reading helps me relax and stay curious. I also love trying new dishes and experimenting with flavors in the kitchen.</p>
 
+    <figure style="width: 480px; margin: 40px auto; text-align: center; font-family: Arial, sans-serif;">
+  <iframe
+    width="480"
+    height="270"
+    src="https://www.youtube.com/embed/xiU-O8arVa8?fs=0&autoplay=1"
+    title="A song from one of the greats"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    sandbox="allow-scripts allow-same-origin"
+    style="border: none; display: block; margin: 0 auto;"
+    allow="autoplay"
+  ></iframe>
+</figure>
+
     <hr>
 
     <p>Here are a few things I enjoy:</p>
@@ -62,6 +76,7 @@
       <li>Learning about ethical hacking and vulnerabilities in cybersecurity</li>
       <li>Cooking homemade meals and learning new recipes</li>
       <li>Reading psychological thriller novels and exploring different places I've never been to before.</li>
+        
     </ul>
         <!-- Your Table Starts Here -->
    <center><b> Here's a list of some of my favorite dishes, that I enjoy cooking on my spare time. </b></center>
@@ -108,114 +123,82 @@
 <img src="vclogo.png" alt="Valencia College Logo" width="200"></div>
 
   <h2 style="text-align: center;">Student Input Form</h2>
+<form action="#" method="post" enctype="multipart/form-data" style="max-width: 600px; margin: 20px auto;">
+  <table border="1" cellpadding="10" style="width: 100%; border-collapse: collapse;">
+    <tr>
+      <td><label for="firstName">First Name:</label></td>
+      <td><input type="text" id="firstName" name="firstName" required style="width: 100%; box-sizing: border-box;"></td>
+    </tr>
 
-  <form action="#" method="post" enctype="multipart/form-data">
-    <table border="1" cellpadding="10">
-      <!-- First Name -->
-      <tr>
-        <td><label for="firstName">First Name:</label></td>
-        <td><input type="text" id="firstName" name="firstName" required></td>
-      </tr>
+    <tr>
+      <td><label for="lastName">Last Name:</label></td>
+      <td><input type="text" id="lastName" name="lastName" required style="width: 100%; box-sizing: border-box;"></td>
+    </tr>
 
-      <!-- Last Name -->
-      <tr>
-        <td><label for="lastName">Last Name:</label></td>
-        <td><input type="text" id="lastName" name="lastName" required></td>
-      </tr>
+    <tr>
+      <td>Gender:</td>
+      <td>
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label>
+      </td>
+    </tr>
 
-      <!-- Gender (Radio Buttons) -->
-      <tr>
-        <td>Gender:</td>
-        <td>
-          <input type="radio" id="male" name="gender" value="Male">
-          <label for="male">Male</label><br>
-          <input type="radio" id="female" name="gender" value="Female">
-          <label for="female">Female</label>
-        </td>
-      </tr>
+    <tr>
+      <td>Select Your Favorite Colors:</td>
+      <td>
+        <input type="checkbox" id="red" name="color" value="Red">
+        <label for="red">Red</label><br>
+        <input type="checkbox" id="white" name="color" value="White">
+        <label for="white">White</label><br>
+        <input type="checkbox" id="blue" name="color" value="Blue">
+        <label for="blue">Blue</label>
+      </td>
+    </tr>
 
-      <!-- Favorite Colors (Checkboxes) -->
-      <tr>
-        <td>Select Your Favorite Colors:</td>
-        <td>
-          <input type="checkbox" id="red" name="color" value="Red">
-          <label for="red">Red</label><br>
-          <input type="checkbox" id="white" name="color" value="White">
-          <label for="white">White</label><br>
-          <input type="checkbox" id="blue" name="color" value="Blue">
-          <label for="blue">Blue</label>
-        </td>
-      </tr>
+    <tr>
+      <td>Choose a Sport:</td>
+      <td>
+        <select name="sport" id="sport" style="width: 100%; box-sizing: border-box;">
+          <option value="soccer">Soccer</option>
+          <option value="basketball">Basketball</option>
+          <option value="tennis">Tennis</option>
+          <option value="baseball">Baseball</option>
+          <option value="volleyball">Volleyball</option>
+          <option value="golf">Golf</option>
+          <option value="swimming">Swimming</option>
+          <option value="wrestling">Wrestling</option>
+          <option value="track">Track & Field</option>
+          <option value="rugby">Rugby</option>
+        </select>
+      </td>
+    </tr>
 
-      <!-- Sports Dropdown -->
-      <tr>
-        <td>Choose a Sport:</td>
-        <td>
-          <select name="sport" id="sport">
-            <option value="soccer">Soccer</option>
-            <option value="basketball">Basketball</option>
-            <option value="tennis">Tennis</option>
-            <option value="baseball">Baseball</option>
-            <option value="volleyball">Volleyball</option>
-            <option value="golf">Golf</option>
-            <option value="swimming">Swimming</option>
-            <option value="wrestling">Wrestling</option>
-            <option value="track">Track & Field</option>
-            <option value="rugby">Rugby</option>
-          </select>
-        </td>
-      </tr>
+    <tr>
+      <td>Write about Global Warming:</td>
+      <td>
+        <textarea name="globalWarming" rows="20" cols="50" placeholder="Write your thoughts here..." style="width: 100%; box-sizing: border-box;"></textarea>
+      </td>
+    </tr>
 
-      <!-- Global Warming Textarea -->
-      <tr>
-        <td>Write about Global Warming:</td>
-        <td>
-          <textarea name="globalWarming" rows="20" cols="50" placeholder="Write your thoughts here..."></textarea>
-        </td>
-      </tr>
+    <tr>
+      <td><label for="password">Password:</label></td>
+      <td><input type="password" id="password" name="password" maxlength="10" required style="width: 100%; box-sizing: border-box;"></td>
+    </tr>
 
-      <!-- Password -->
-      <tr>
-        <td><label for="password">Password:</label></td>
-        <td><input type="password" id="password" name="password" maxlength="10" required></td>
-      </tr>
+    <tr>
+      <td><label for="fileUpload">Upload a File:</label></td>
+      <td><input type="file" id="fileUpload" name="fileUpload"></td>
+    </tr>
 
-      <!-- File Upload -->
-      <tr>
-        <td><label for="fileUpload">Upload a File:</label></td>
-        <td><input type="file" id="fileUpload" name="fileUpload"></td>
-      </tr>
-
-      <!-- Submit Button -->
-      <tr>
-        <td colspan="2" style="text-align:center;">
-          <input type="submit" value="Submit Form">
-        </td>
-      </tr>
-    </table>
-  </form>
-<br>
-    
-<figure style="width: 480px; margin: 40px auto; text-align: center; font-family: Arial, sans-serif;">
-  <figcaption style="margin-bottom: 12px; font-weight: bold; font-size: 1.1rem; color: #333;">
-    A song from one of the greats
-  </figcaption>
-  <iframe
-    width="480"
-    height="270"
-    src="https://www.youtube.com/embed/xiU-O8arVa8?fs=0&autoplay=1"
-    title="A song from one of the greats"
-    frameborder="0"
-    allow="autoplay; encrypted-media"
-    sandbox="allow-scripts allow-same-origin"
-    style="border: none; display: block; margin: 0 auto;"
-    allow="autoplay"
-  ></iframe>
-</figure>
-
-
-
-    
+    <tr>
+      <td colspan="2" style="text-align:center;">
+        <input type="submit" value="Submit Form" style="padding: 10px 20px; cursor: pointer; font-weight: bold; background-color: #4CAF50; color: white; border: none; border-radius: 4px;">
+      </td>
+    </tr>
+  </table>
+</form>
 </body>
 </html>
 
