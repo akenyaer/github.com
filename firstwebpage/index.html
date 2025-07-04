@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Akenyae Jones</title>
+  <title>Akenyae Jones – Printable Section</title>
   <style>
     body {
       background-color: #f0f8ff;
@@ -66,14 +66,26 @@
       cursor: pointer;
     }
 
-    /* Print Styling */
+    /* === PRINT STYLING === */
     @media print {
-      .print-button {
-        display: none;
+      body * {
+        visibility: hidden;
       }
 
-      body {
+      #print-section, #print-section * {
+        visibility: visible;
+      }
+
+      #print-section {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
         background-color: white;
+      }
+
+      .print-button {
+        display: none;
       }
     }
   </style>
@@ -83,137 +95,56 @@
 
   <!-- Print Button -->
   <div class="print-button">
-    <button onclick="window.print()">Print This Page</button>
+    <button onclick="window.print()">Print My Bio + Interests</button>
   </div>
 
-  <h1>Welcome to my page!</h1>
+  <!-- ✅ This is the ONLY section that will print -->
+  <div id="print-section">
 
-  <div class="flex-container">
+    <h1>Welcome to my page!</h1>
+
     <div class="text-content">
       <p>Hi! My name is <strong><u>Akenyae Jones</u></strong> and I’m passionate about cybersecurity. My love for technology started at a young age—I was absolutely obsessed with customizing my <em>MySpace</em> page. That early curiosity sparked a lifelong interest in how technology works and how to protect digital information. Now, I'm pursuing a degree in cybersecurity and looking forward to building a future in the tech field.</p>
 
       <p>When I’m not studying or learning about new tech trends, I enjoy spending my spare time cooking new recipes and reading. Whether it's a mystery novel or an inspiring autobiography, reading helps me relax and stay curious. I also love trying new dishes and experimenting with flavors in the kitchen.</p>
     </div>
 
-    <div class="video-content">
-      <iframe
-        width="480"
-        height="270"
-        src="https://www.youtube.com/embed/xiU-O8arVa8?fs=0&autoplay=1"
-        title="A song from one of the greats"
-        frameborder="0"
-        allow="autoplay; encrypted-media"
-        sandbox="allow-scripts allow-same-origin"
-      ></iframe>
-    </div>
-  </div>
+    <p>Here are a few things I enjoy:</p>
+    <ul>
+      <li>Learning about ethical hacking and vulnerabilities in cybersecurity</li>
+      <li>Cooking homemade meals and learning new recipes</li>
+      <li>Reading psychological thriller novels and exploring different places I've never been to before.</li>
+    </ul>
 
-  <hr>
-
-  <p>Here are a few things I enjoy:</p>
-  <ul>
-    <li>Learning about ethical hacking and vulnerabilities in cybersecurity</li>
-    <li>Cooking homemade meals and learning new recipes</li>
-    <li>Reading psychological thriller novels and exploring different places I've never been to before.</li>
-  </ul>
-
-  <center><b>Here's a list of some of my favorite dishes that I enjoy cooking in my spare time:</b></center>
-  <table>
-    <thead>
-      <tr>
-        <th>Akenyae's favorite dishes</th>
-        <th>Recipe 1</th>
-        <th>Recipe 2</th>
-        <th>Recipe 3</th>
-        <th>Recipe 4</th>
-        <th>Recipe 5</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td></td>
-        <td>Gumbo</td>
-        <td>Beef Stew</td>
-        <td>Beef Pho</td>
-        <td>Ramen</td>
-        <td>Enchiladas</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <p>Visit my school’s website:
-    <a href="https://valenciacollege.edu" target="_blank">Valencia College</a>
-  </p>
-
-  <!-- Valencia College Logo and Form -->
-  <div style="text-align: center;">
-    <img src="vclogo.png" alt="Valencia College Logo" width="200">
-  </div>
-
-  <h2>Student Input Form</h2>
-  <form action="#" method="post" enctype="multipart/form-data" style="max-width: 600px; margin: 20px auto;">
-    <table border="1" cellpadding="10" style="width: 100%; border-collapse: collapse;">
-      <tr>
-        <td><label for="firstName">First Name:</label></td>
-        <td><input type="text" id="firstName" name="firstName" required style="width: 100%;"></td>
-      </tr>
-      <tr>
-        <td><label for="lastName">Last Name:</label></td>
-        <td><input type="text" id="lastName" name="lastName" required style="width: 100%;"></td>
-      </tr>
-      <tr>
-        <td>Gender:</td>
-        <td>
-          <input type="radio" id="male" name="gender" value="Male"><label for="male"> Male</label><br>
-          <input type="radio" id="female" name="gender" value="Female"><label for="female"> Female</label>
-        </td>
-      </tr>
-      <tr>
-        <td>Select Your Favorite Colors:</td>
-        <td>
-          <input type="checkbox" id="red" name="color" value="Red"><label for="red"> Red</label><br>
-          <input type="checkbox" id="white" name="color" value="White"><label for="white"> White</label><br>
-          <input type="checkbox" id="blue" name="color" value="Blue"><label for="blue"> Blue</label>
-        </td>
-      </tr>
-      <tr>
-        <td>Choose a Sport:</td>
-        <td>
-          <select name="sport" id="sport" style="width: 100%;">
-            <option value="soccer">Soccer</option>
-            <option value="basketball">Basketball</option>
-            <option value="tennis">Tennis</option>
-            <option value="baseball">Baseball</option>
-            <option value="volleyball">Volleyball</option>
-            <option value="golf">Golf</option>
-            <option value="swimming">Swimming</option>
-            <option value="wrestling">Wrestling</option>
-            <option value="track">Track & Field</option>
-            <option value="rugby">Rugby</option>
-          </select>
-        </td>
-      </tr>
-      <tr>
-        <td>Write about Global Warming:</td>
-        <td>
-          <textarea name="globalWarming" rows="10" placeholder="Write your thoughts here..." style="width: 100%;"></textarea>
-        </td>
-      </tr>
-      <tr>
-        <td><label for="password">Password:</label></td>
-        <td><input type="password" id="password" name="password" maxlength="10" required style="width: 100%;"></td>
-      </tr>
-      <tr>
-        <td><label for="fileUpload">Upload a File:</label></td>
-        <td><input type="file" id="fileUpload" name="fileUpload"></td>
-      </tr>
-      <tr>
-        <td colspan="2" style="text-align:center;">
-          <input type="submit" value="Submit Form" style="padding: 10px 20px; font-weight: bold; background-color: #4CAF50; color: white; border: none; border-radius: 4px;">
-        </td>
-      </tr>
+    <center><b>Here's a list of some of my favorite dishes that I enjoy cooking in my spare time:</b></center>
+    <table>
+      <thead>
+        <tr>
+          <th>Akenyae's favorite dishes</th>
+          <th>Recipe 1</th>
+          <th>Recipe 2</th>
+          <th>Recipe 3</th>
+          <th>Recipe 4</th>
+          <th>Recipe 5</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td></td>
+          <td>Gumbo</td>
+          <td>Beef Stew</td>
+          <td>Beef Pho</td>
+          <td>Ramen</td>
+          <td>Enchiladas</td>
+        </tr>
+      </tbody>
     </table>
-  </form>
+
+  </div>
+
+  <!-- ❌ Everything below will be hidden in print -->
+  <hr>
+  <p>This is outside the print section and will not be included in printing.</p>
 
 </body>
 </html>
