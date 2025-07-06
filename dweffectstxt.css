@@ -11,4 +11,91 @@
 
 */
 
+body {
+  box-shadow: 
+    10px 0 15px rgba(211, 211, 211, 0.5),  /* right shadow */
+    -10px 0 15px rgba(211, 211, 211, 0.5); /* left shadow */
+}
+
+header nav.horizontal li {
+  background-color: rgb(224, 238, 238); /* light teal */
+  border-radius: 10px; /* rounded corners */
+  box-shadow: 5px 5px 5px rgba(147, 207, 207, 1); /* bottom-right shadow */
+  display: inline-block; /* ensures li items display horizontally */
+  margin: 5px; /* optional spacing between items */
+  padding: 5px 10px; /* optional padding */
+}
+
+article {
+  box-shadow:
+    inset 15px 15px 75px rgba(171, 171, 171, 1),  /* inset shadow */
+    5px 5px 5px rgba(101, 101, 101, 1);           /* external shadow */
+  padding: 20px; /* optional for spacing inside article */
+  background-color: #fff; /* helps visualize the shadows */
+  border-radius: 5px; /* optional */
+}
+
+
+<style>
+  body {
+    box-shadow:
+      10px 0 15px rgba(211, 211, 211, 0.5),
+     -10px 0 15px rgba(211, 211, 211, 0.5);
+  }
+
+  header nav.horizontal li {
+    background-color: rgb(224, 238, 238);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(147, 207, 207, 1);
+    display: inline-block;
+    margin: 5px;
+    padding: 5px 10px;
+  }
+
+  article {
+    box-shadow:
+      inset 15px 15px 75px rgba(171, 171, 171, 1),
+      5px 5px 5px rgba(101, 101, 101, 1);
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+</style>
+
+blockquote {
+  /* 1. Standard CSS3 Linear Gradient (left to right) */
+  background: linear-gradient(to right, 
+    rgb(166, 230, 230),              /* Start color */
+    rgb(231, 231, 231) 5%,           /* Mid stop at 5% */
+    rgb(255, 255, 255) 15%);         /* End stop at 15% */
+
+  /* 2. WebKit Gradient (for older Safari/Chrome) */
+  background: -webkit-gradient(
+    linear, 
+    left top, right top,
+    color-stop(0, rgb(166, 230, 230)),
+    color-stop(0.33, rgb(231, 231, 231)),  /* Middle at 33% */
+    color-stop(0.15, rgb(255, 255, 255))
+  );
+
+  /* 3. Internet Explorer 6–9 Gradient Filter (horizontal) */
+  filter: progid:DXImageTransform.Microsoft.gradient(
+    GradientType=1,      /* 0 = vertical, 1 = horizontal */
+    startColorstr='#DEF4F4',
+    endColorstr='#FFFFFF'
+  );
+
+  padding: 15px;
+  border-radius: 5px;
+  margin: 15px;
+}
+
+
+
+
+
+
+
+
+
 
