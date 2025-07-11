@@ -18,4 +18,31 @@ img {
 }
 
 
+body {
+   background-image: url('tan.jpg');
+   font-family: sans-serif;
+   text-align: center;
+   margin: 0;
+   padding: 0;
+}
+
+h1 {
+   color: green;
+}
+
+dt {
+   font-weight: bold;
+   color: green;
+   margin-top: 1em;
+}
+
+dd {
+   margin-bottom: 1em;
+}
+
+.serving-time {
+   font-size: 1em;
+   font-weight: bold;
+}
+
 
